@@ -1,0 +1,24 @@
+name: Smoke Tests
+on: 
+  pull_request:
+    branches:
+      - main
+jobs:
+  run-smoke-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.1.5
+      - name: Install dependencies
+        run: npm install
+      - name: Run cypress smoke tests
+        run: npx cypress run --env TAGS='@smoke'
+      - name: Archive test results
+        uses: actions/upload-artifact@v4
+        if: always()        
+        with:
+          name: test-results
+          path: 
+            cypress/reports/
+            cypress/screenshots/
+            
