@@ -17,5 +17,4 @@ jobs:
           name: test-results
           path: 
             cypress/reports/
-            cypress/screenshots/
             
