@@ -1,7 +1,9 @@
 name: Say Hello Wordl!
-on: [Workflow_dispatch]
+
+on: [workflow_dispatch]
 jobs:
+  say-hello:
   runs-on: ubuntu-latest
   steps:
     - name: Say hello!!
-      run: echo "HEllo Wordl! I/m an action!"
+      run: echo "Hello World! I'm an action!"
