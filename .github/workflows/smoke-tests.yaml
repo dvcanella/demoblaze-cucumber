@@ -18,7 +18,7 @@ jobs:
         if: always()        
         with:
           name: test-results
-          path: 
+          path: | 
             cypress/reports/
             cypress/screenshots/
             
