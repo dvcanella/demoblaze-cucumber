@@ -16,6 +16,6 @@ jobs:
         with:
           name: test-results
           path: 
-            cypress/reports/html/
+            cypress/reports/
             cypress/screenshots/
             
