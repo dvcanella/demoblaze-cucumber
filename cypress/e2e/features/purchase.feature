@@ -1,5 +1,4 @@
-# cypress/e2e/purchase.feature
-
+@purchase
 Feature: Purchase
 
         Background:
