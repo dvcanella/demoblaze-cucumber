@@ -1,4 +1,3 @@
-@purchase
 Feature: Purchase
 
         Background:
@@ -8,11 +7,11 @@ Feature: Purchase
         Scenario: Complete purchase with multiple items
              When I add the following items to the cart and receive the message "Product added"
 
-                  | itemName          | price |
-                  | Samsung galaxy s7 | 800   |
-                  | Nokia lumia 1520  | 820   |
+                  | itemName          |
+                  | Samsung galaxy s6 |
+                  | Nokia lumia 1520  |
 
-             Then the total price should be "1620"
+             Then the total price should be "1180"
               And I complete the purchase with name "John Doe", country "USA", city "New York", card "1234567890123456", month "12", and year "2025"
              Then I should see the message "Thank you for your purchase!"
               And the cart should be empty

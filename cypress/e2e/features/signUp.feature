@@ -1,4 +1,4 @@
-@signUp
+
 Feature: SignUp
 
         Background:
