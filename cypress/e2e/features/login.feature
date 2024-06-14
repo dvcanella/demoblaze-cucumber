@@ -19,10 +19,12 @@ Feature: Login
              When I submit the login form without entering a password and username "username"
              Then I should see the alert "Please fill out Username and Password."
 
+        @regression
         Scenario: Validate login with incorrect credentials
              When I log in with incorrect username "incorrect_user" and password "incorrect_password"
              Then I should see the alert "User does not exist."
 
+        @regression
         Scenario: Validate logout functionality
             Given I am logged in with username "admin" and password "admin"
              When I log out
